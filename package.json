@@ -1,21 +1,33 @@
 {
     "name": "link-lang",
     "displayName": "Link-Lang Support",
-    "description": "Syntax highlighting for NebulaOS Link-Lang",
+    "description": "Syntax highlighting and language support for NebulaOS Link-Lang",
     "version": "0.5.0",
     "publisher": "NebulaOS",
+    "icon": "images/icon.png", 
     "engines": {
         "vscode": "^1.80.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "keywords": [
+        "link-lang",
+        "link",
+        "nebulaos",
+        "syntax highlighting"
+    ],
     "contributes": {
         "languages": [
             {
                 "id": "link",
-                "aliases": ["Link-Lang", "link"],
-                "extensions": [".link"],
+                "aliases": [
+                    "Link-Lang",
+                    "link"
+                ],
+                "extensions": [
+                    ".link"
+                ],
                 "configuration": "./language-configuration.json"
             }
         ],
@@ -26,5 +38,9 @@
                 "path": "./link.tmLanguage.json"
             }
         ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/logoro17/link-syntax"
     }
 }
