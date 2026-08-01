@@ -1,0 +1,30 @@
+{
+    "name": "link-lang",
+    "displayName": "Link-Lang Support",
+    "description": "Syntax highlighting for NebulaOS Link-Lang",
+    "version": "0.5.0",
+    "publisher": "NebulaOS",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "link",
+                "aliases": ["Link-Lang", "link"],
+                "extensions": [".link"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "link",
+                "scopeName": "source.link",
+                "path": "./link.tmLanguage.json"
+            }
+        ]
+    }
+}

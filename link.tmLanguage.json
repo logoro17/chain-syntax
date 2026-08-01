@@ -1,0 +1,141 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Link-Lang",
+    "scopeName": "source.link",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#extern_cpp"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#storage"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#support"
+        },
+        {
+            "include": "#operators"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "match": "#.*$",
+                    "name": "comment.line.number-sign.link"
+                }
+            ]
+        },
+        "extern_cpp": {
+            "begin": "(?x) \\b(extern)\\s+(\"c\")\\s*(?:(\"[^\"]*\"))?\\s*(\\{)",
+            "beginCaptures": {
+                "1": { "name": "keyword.control.link" },
+                "2": { "name": "string.quoted.double.link" },
+                "3": { "name": "string.quoted.double.link" },
+                "4": { "name": "punctuation.section.block.begin.link" }
+            },
+            "end": "\\}",
+            "endCaptures": {
+                "0": { "name": "punctuation.section.block.end.link" }
+            },
+            "patterns": [
+                {
+                    "include": "source.cpp"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "begin": "\"",
+                    "end": "\"",
+                    "name": "string.quoted.double.link",
+                    "patterns": [
+                        {
+                            "match": "\\\\.",
+                            "name": "constant.character.escape.link"
+                        }
+                    ]
+                },
+                {
+                    "begin": "'",
+                    "end": "'",
+                    "name": "string.quoted.single.link",
+                    "patterns": [
+                        {
+                            "match": "\\\\.",
+                            "name": "constant.character.escape.link"
+                        }
+                    ]
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\b(if|elif|else|while|for|in|return|break|continue|try|catch|import)\\b",
+                    "name": "keyword.control.link"
+                }
+            ]
+        },
+        "storage": {
+            "patterns": [
+                {
+                    "match": "\\b(set|func|class|init|new|app|window|package|sh)\\b",
+                    "name": "storage.type.link"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "match": "\\b(true|false|clear|cls)\\b",
+                    "name": "constant.language.link"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "match": "\\b[0-9]+(\\.[0-9]+)?\\b",
+                    "name": "constant.numeric.link"
+                }
+            ]
+        },
+        "support": {
+            "patterns": [
+                {
+                    "match": "\\b(print|len|range|math|time|io|os|str|list|fs|term|dict|net|audio|gui)\\b",
+                    "name": "support.class.link"
+                },
+                {
+                    "match": "\\b(gui_setup|gui_running|gui_start|gui_present|gui_clear|gui_rect|gui_text|gui_close|gui_click|gui_is_key_pressed|gui_is_key_down|gui_get_time)\\b",
+                    "name": "support.function.link"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "match": "(\\+|-|\\*|/|=|==|!=|<|>|<=|>=|and|or)",
+                    "name": "keyword.operator.link"
+                }
+            ]
+        }
+    }
+}
+
