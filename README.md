@@ -53,4 +53,4 @@ set func class init new app window package sh
 
 ## License
 
-MIT License - Part of the **NebulaOS** project.
+GPLv3 License - Part of the **NebulaOS** project.
