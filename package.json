@@ -2,7 +2,7 @@
     "name": "link-lang",
     "displayName": "Link-Lang Support",
     "description": "Syntax highlighting and language support for NebulaOS Link-Lang",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "publisher": "NebulaOS",
     "icon": "images/icon.png", 
     "engines": {
@@ -28,7 +28,11 @@
                 "extensions": [
                     ".link"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./images/icon_file.png",
+                    "dark": "./images/icon_file.png"
+                }
             }
         ],
         "grammars": [
