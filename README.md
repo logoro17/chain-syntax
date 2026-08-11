@@ -1,6 +1,6 @@
-# Link-Lang VSCode Extension (`link-lang`)
+# Chain-Lang VSCode Extension (`Chain-lang`)
 
-Official VSCode syntax highlighting and language support extension for **Link-Lang**, the custom programming language powering the **NebulaOS** ecosystem.
+Official VSCode syntax highlighting and language support extension for **Chain-Lang**, the custom programming language powering the **NebulaOS** ecosystem.
 
 ## Features
 
@@ -18,12 +18,12 @@ Official VSCode syntax highlighting and language support extension for **Link-La
 ## Language Specifications
 
 ### Keywords
-```link
+```Chain
 if elif else while for in return break continue try catch import
 ```
 
 ### Storage Types & Declarations
-```link
+```chain
 set func class init new app window package sh
 ```
 
@@ -36,7 +36,7 @@ set func class init new app window package sh
 ## Installation & Development
 
 1. Clone or place this repository into your VSCode extensions directory:
-   - Linux: `~/.vscode/extensions/link-lang`
+   - Linux: `~/.vscode/extensions/Chain-lang`
 2. Open the folder in VSCode.
 3. Press `F5` to open a new Extension Development Host window and test your changes.
 
@@ -45,7 +45,7 @@ set func class init new app window package sh
 ## Extension Structure
 
 - `package.json`: Extension manifest defining language contributions and grammars.
-- `link.tmLanguage.json`: TextMate grammar rules for tokenization and syntax coloring.
+- `Chain.tmLanguage.json`: TextMate grammar rules for tokenization and syntax coloring.
 - `language-configuration.json`: Editor behavior rules (brackets, auto-closing pairs, and indentation).
 - `launch.json`: Debugging configuration for extension development.
 
