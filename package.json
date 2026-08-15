@@ -2,9 +2,9 @@
     "name": "chain-lang",
     "displayName": "Chain-Lang Support",
     "description": "Syntax highlighting and language support for Chain-Lang",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "publisher": "Nebania",
-    "icon": "images/icon.png", 
+    "icon": "images/chain-logo.png", 
     "engines": {
         "vscode": "^1.80.0"
     },

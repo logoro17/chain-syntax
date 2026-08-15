@@ -1,7 +1,7 @@
 # ==========================================
 # Environment Variables (SANGAT PENTING!)
 # ==========================================
-chain-lang-0.5.1.vsix 
+chain-lang-* 
 .env
 .env.local
 .env.development.local
