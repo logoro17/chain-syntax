@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "Link-Lang",
-    "scopeName": "source.link",
+    "name": "Chain-Lang",
+    "scopeName": "source.chain",
     "patterns": [
         {
             "include": "#strings"
@@ -39,21 +39,21 @@
             "patterns": [
                 {
                     "match": "#.*$",
-                    "name": "comment.line.number-sign.link"
+                    "name": "comment.line.number-sign.chain"
                 }
             ]
         },
         "extern_cpp": {
             "begin": "(?x) \\b(extern)\\s+(\"c\"|\"C\")\\s*(?:(\"[^\"]*\"))?\\s*(\\{)",
             "beginCaptures": {
-                "1": { "name": "keyword.control.link" },
-                "2": { "name": "string.quoted.double.link" },
-                "3": { "name": "string.quoted.double.link" },
-                "4": { "name": "punctuation.section.block.begin.link" }
+                "1": { "name": "keyword.control.chain" },
+                "2": { "name": "string.quoted.double.chain" },
+                "3": { "name": "string.quoted.double.chain" },
+                "4": { "name": "punctuation.section.block.begin.chain" }
             },
             "end": "\\}",
             "endCaptures": {
-                "0": { "name": "punctuation.section.block.end.link" }
+                "0": { "name": "punctuation.section.block.end.chain" }
             },
             "patterns": [
                 {
@@ -66,22 +66,22 @@
                 {
                     "begin": "\"",
                     "end": "\"",
-                    "name": "string.quoted.double.link",
+                    "name": "string.quoted.double.chain",
                     "patterns": [
                         {
                             "match": "\\\\.",
-                            "name": "constant.character.escape.link"
+                            "name": "constant.character.escape.chain"
                         }
                     ]
                 },
                 {
                     "begin": "'",
                     "end": "'",
-                    "name": "string.quoted.single.link",
+                    "name": "string.quoted.single.chain",
                     "patterns": [
                         {
                             "match": "\\\\.",
-                            "name": "constant.character.escape.link"
+                            "name": "constant.character.escape.chain"
                         }
                     ]
                 }
@@ -91,7 +91,7 @@
             "patterns": [
                 {
                     "match": "\\b(if|elif|else|while|for|in|return|break|continue|try|catch|import)\\b",
-                    "name": "keyword.control.link"
+                    "name": "keyword.control.chain"
                 }
             ]
         },
@@ -99,7 +99,7 @@
             "patterns": [
                 {
                     "match": "\\b(set|func|class|init|new|app|window|package|sh)\\b",
-                    "name": "storage.type.link"
+                    "name": "storage.type.chain"
                 }
             ]
         },
@@ -107,7 +107,7 @@
             "patterns": [
                 {
                     "match": "\\b(true|false|clear|cls)\\b",
-                    "name": "constant.language.link"
+                    "name": "constant.language.chain"
                 }
             ]
         },
@@ -115,7 +115,7 @@
             "patterns": [
                 {
                     "match": "\\b(0x[0-9a-fA-F]+|[0-9]+(\\.[0-9]+)?)\\b",
-                    "name": "constant.numeric.link"
+                    "name": "constant.numeric.chain"
                 }
             ]
         },
@@ -123,11 +123,11 @@
             "patterns": [
                 {
                     "match": "\\b(print|len|range|math|time|io|os|str|list|fs|term|dict|net|audio|gui)\\b",
-                    "name": "support.class.link"
+                    "name": "support.class.chain"
                 },
                 {
                     "match": "\\b(gui_setup|gui_running|gui_start|gui_present|gui_clear|gui_rect|gui_text|gui_close|gui_click|gui_is_key_pressed|gui_is_key_down|gui_get_time)\\b",
-                    "name": "support.function.link"
+                    "name": "support.function.chain"
                 }
             ]
         },
@@ -135,7 +135,7 @@
             "patterns": [
                 {
                     "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
-                    "name": "entity.name.function.link"
+                    "name": "entity.name.function.chain"
                 }
             ]
         },
@@ -143,7 +143,7 @@
             "patterns": [
                 {
                     "match": "(==|!=|<=|>=|\\+|-|\\*|/|=|<|>|\\band\\b|\\bor\\b)",
-                    "name": "keyword.operator.link"
+                    "name": "keyword.operator.chain"
                 }
             ]
         }

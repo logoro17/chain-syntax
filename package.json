@@ -1,9 +1,9 @@
 {
-    "name": "link-lang",
-    "displayName": "Link-Lang Support",
-    "description": "Syntax highlighting and language support for NebulaOS Link-Lang",
-    "version": "0.5.1",
-    "publisher": "NebulaOS",
+    "name": "chain-lang",
+    "displayName": "Chain-Lang Support",
+    "description": "Syntax highlighting and language support for Chain-Lang",
+    "version": "0.5.2",
+    "publisher": "Nebania",
     "icon": "images/icon.png", 
     "engines": {
         "vscode": "^1.80.0"
@@ -12,21 +12,21 @@
         "Programming Languages"
     ],
     "keywords": [
-        "link-lang",
-        "link",
+        "chain-lang",
+        "chain",
         "nebulaos",
         "syntax highlighting"
     ],
     "contributes": {
         "languages": [
             {
-                "id": "link",
+                "id": "chain",
                 "aliases": [
-                    "Link-Lang",
-                    "link"
+                    "Chain-Lang",
+                    "chain"
                 ],
                 "extensions": [
-                    ".link"
+                    ".chain"
                 ],
                 "configuration": "./language-configuration.json",
                 "icon": {
@@ -37,14 +37,14 @@
         ],
         "grammars": [
             {
-                "language": "link",
-                "scopeName": "source.link",
-                "path": "./link.tmLanguage.json"
+                "language": "chain",
+                "scopeName": "source.chain",
+                "path": "./chain.tmLanguage.json"
             }
         ]
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/logoro17/link-syntax"
+        "url": "https://github.com/logoro17/chain-syntax"
     }
 }
